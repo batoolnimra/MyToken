@@ -44,7 +44,8 @@ MyToken/
 
 This screenshot shows that the smart contract passed the test:
 
-![Test Result](./screenshots/mytoken-test.png)
+![Test Passed](screenshots/mytoken-test-passed.png)
+
 
 ---
 
