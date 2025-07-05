@@ -54,6 +54,20 @@ This screenshot shows that the smart contract passed the test:
 ```bash
 npx hardhat run scripts/deploy.js --network hardhat
 
+### 🔁 Wallet-to-Wallet Token Transfer
+
+After deploying MyToken, we used Hardhat Console to simulate sending tokens between wallets.
+
+```js
+// Transfer 100 tokens to addr1
+await token.transfer(addr1.address, ethers.parseUnits("100", 18));
+
+// Check addr1 balance
+const addr1Balance = await token.balanceOf(addr1.address);
+console.log("addr1 balance:", ethers.formatUnits(addr1Balance, 18));
+// Output: addr1 balance: 100.0
+
+
 ✨ Author
 Nimra Batool
 Aspiring Blockchain Developer | Solidity | Smart Contracts | Web3.js
